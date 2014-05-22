@@ -1,20 +1,19 @@
-package com.bignerdranch.android.hellomoon.test;
+package com.example.android.musicplayer.test;
 
 import android.os.Bundle;
 import android.test.ActivityInstrumentationTestCase2;
 
-import com.bignerdranch.android.hellomoon.HelloMoonActivity;
-import com.bignerdranch.android.hellomoon.R;
+import com.example.android.musicplayer.MainActivity;
 
 import static com.google.android.apps.common.testing.ui.espresso.Espresso.onView;
 
 /**
  * Created by mezzetti on 22/05/14.
  */
-public class First extends ActivityInstrumentationTestCase2<HelloMoonActivity>{
+public class First extends ActivityInstrumentationTestCase2<MainActivity>{
 
     public First(){
-        super(HelloMoonActivity.class);
+        super(MainActivity.class);
     }
 
     @Override
@@ -27,7 +26,7 @@ public class First extends ActivityInstrumentationTestCase2<HelloMoonActivity>{
         super.tearDown();
     }
 
-    public First(Class<HelloMoonActivity> activityClass) {
+    public First(Class<MainActivity> activityClass) {
         super(activityClass);
     }
 
