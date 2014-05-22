@@ -17,21 +17,25 @@ import java.util.Random;
 public class SyncActivity extends ActionBarActivity {
 
     private LogPrinter logger = new LogPrinter(Log.VERBOSE,"MessageQueue-Log");
-
+    private WaitTask wt = null;
     /*A simple aysnc task*/
     private class WaitTask extends AsyncTask<String, Integer, Void> {
 
         protected Void doInBackground(String... p) {
             System.out.println("Running AsyncTask");System.out.flush();
             Random rand = new Random();
-            //SystemClock.sleep(rand.nextInt(5000) + 2000);
+            SystemClock.sleep(rand.nextInt(5000) + 2000);
+            publishProgress();
             return null;
         }
 
+        protected void onProgressUpdate(Integer... progress) {
+            setStatus(getString(R.string.hello_world));
+        }
 
         protected void onPostExecute(Long result) {
             System.out.println("Ending AsyncTask");System.out.flush();
-            setStatus(getString(R.string.hello_world));
+            setStatus("");
             System.out.println("Ended AsyncTask");System.out.flush();
         }
     }
@@ -53,12 +57,17 @@ public class SyncActivity extends ActionBarActivity {
 
 
     public void onRequestButtonClick(@SuppressWarnings("unused") View view) {
-        System.out.println("Inst AsyncTask");System.out.flush();
-        WaitTask wt = new WaitTask();
-        System.out.println("Launching AsyncTask");System.out.flush();
-        wt.execute();
-        //wt.onPostExecute(1L);
-        System.out.println("Launched AsyncTask");System.out.flush();
+        if(wt==null) {
+            System.out.println("Inst AsyncTask");
+            System.out.flush();
+            wt = new WaitTask();
+            System.out.println("Launching AsyncTask");
+            System.out.flush();
+            wt.execute();
+            //wt.onPostExecute(1L);
+            System.out.println("Launched AsyncTask");
+            System.out.flush();
+        }
     }
 
     @Override

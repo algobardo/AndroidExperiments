@@ -10,6 +10,7 @@ import com.google.android.apps.common.testing.ui.espresso.contrib.CountingIdling
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
+import android.os.AsyncTask;
 import android.os.Looper;
 import android.os.SystemClock;
 import android.test.ActivityInstrumentationTestCase2;
@@ -19,6 +20,8 @@ import android.util.LogPrinter;
 
 import org.esprtimeouts.app.R;
 import org.esprtimeouts.app.SyncActivity;
+
+import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * Example for {@link CountingIdlingResource}. Demonstrates how to wait on a delayed response from
@@ -44,12 +47,7 @@ public class AdvancedSynchronizationTest extends ActivityInstrumentationTestCase
     public void testClickandwait() {
         // Request the "hello world!" text by clicking on the request button.
         onView(withId(R.id.request_button)).perform(click());
-
-        long stime = System.currentTimeMillis();
-        while(System.currentTimeMillis() - stime < 2000)
-            Thread.yield();
         // Espresso waits for the UI message queue to go idle and then continues.
-        Looper.getMainLooper().dump(new LogPrinter(Log.VERBOSE,"MainLooperDump"),"MainLooperDumpP2");
         // Will the check pass?.
         onView(withId(R.id.status_text)).check(matches(withText(R.string.hello_world)));
     }

@@ -1,0 +1,162 @@
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b300bf70} android.view.ViewRootImpl$4@b301b250: 0
+V/Logger  ( 1954): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b300bf70} android.view.ViewRootImpl$4@b301b250
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.view.Choreographer$FrameHandler) {b2ffc750} android.view.Choreographer$FrameDisplayEventReceiver@b2ffc778: 0
+V/Logger  ( 1954): <<<<< Finished to Handler (android.view.Choreographer$FrameHandler) {b2ffc750} android.view.Choreographer$FrameDisplayEventReceiver@b2ffc778
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b300bf70} null: 5
+V/Logger  ( 1954): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b300bf70} null
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b300bf70} null: 6
+V/Logger  ( 1954): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b300bf70} null
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.view.inputmethod.InputMethodManager$H) {b2ff4d60} null: 4
+V/Logger  ( 1954): <<<<< Finished to Handler (android.view.inputmethod.InputMethodManager$H) {b2ff4d60} null
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.view.inputmethod.InputMethodManager$H) {b2ff4d60} null: 2
+V/Logger  ( 1954): <<<<< Finished to Handler (android.view.inputmethod.InputMethodManager$H) {b2ff4d60} null
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.view.Choreographer$FrameHandler) {b2ffc750} android.view.Choreographer$FrameDisplayEventReceiver@b2ffc778: 0
+V/Logger  ( 1954): <<<<< Finished to Handler (android.view.Choreographer$FrameHandler) {b2ffc750} android.view.Choreographer$FrameDisplayEventReceiver@b2ffc778
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b300bf70} null: 13
+V/Logger  ( 1954): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b300bf70} null
+V/Logger  ( 1954): >>>>> Dispatching to Handler (com.android.internal.view.IInputConnectionWrapper$MyHandler) {b2ff44f8} null: 100
+V/Logger  ( 1954): <<<<< Finished to Handler (com.android.internal.view.IInputConnectionWrapper$MyHandler) {b2ff44f8} null
+V/Logger  ( 1954): >>>>> Dispatching to Handler (com.android.internal.view.IInputConnectionWrapper$MyHandler) {b2ff44f8} null: 65
+V/Logger  ( 1954): <<<<< Finished to Handler (com.android.internal.view.IInputConnectionWrapper$MyHandler) {b2ff44f8} null
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b300bf70} android.app.ActivityThread$1@b2fee6d0: 0
+V/Logger  ( 1954): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b300bf70} android.app.ActivityThread$1@b2fee6d0
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b300bf70} null: 22
+V/Logger  ( 1954): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b300bf70} null
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.view.Choreographer$FrameHandler) {b2ffc750} android.view.Choreographer$FrameDisplayEventReceiver@b2ffc778: 0
+V/Logger  ( 1954): <<<<< Finished to Handler (android.view.Choreographer$FrameHandler) {b2ffc750} android.view.Choreographer$FrameDisplayEventReceiver@b2ffc778
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b300bf70} android.view.View$PerformClick@b305a930: 0
+V/Logger  ( 1954): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b300bf70} android.view.View$PerformClick@b305a930
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b300bf70} android.view.View$UnsetPressedState@b305a940: 0
+V/Logger  ( 1954): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b300bf70} android.view.View$UnsetPressedState@b305a940
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.app.ActivityThread$H) {b2fee3a8} null: 114
+V/Logger  ( 1954): <<<<< Finished to Handler (android.app.ActivityThread$H) {b2fee3a8} null
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.app.ActivityThread$H) {b2fee3a8} null: 115
+V/Logger  ( 1954): <<<<< Finished to Handler (android.app.ActivityThread$H) {b2fee3a8} null
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.view.Choreographer$FrameHandler) {b2ffc750} android.view.Choreographer$FrameDisplayEventReceiver@b2ffc778: 0
+V/Logger  ( 1954): <<<<< Finished to Handler (android.view.Choreographer$FrameHandler) {b2ffc750} android.view.Choreographer$FrameDisplayEventReceiver@b2ffc778
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.app.ActivityThread$H) {b2fee3a8} null: 131
+V/Logger  ( 1954): <<<<< Finished to Handler (android.app.ActivityThread$H) {b2fee3a8} null
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.app.ActivityThread$H) {b2fee3a8} null: 102
+V/Logger  ( 1954): <<<<< Finished to Handler (android.app.ActivityThread$H) {b2fee3a8} null
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b300bf70} null: 6
+V/Logger  ( 1954): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b300bf70} null
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b300bf70} null: 8
+V/Logger  ( 1954): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b300bf70} null
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.view.Choreographer$FrameHandler) {b2ffc750} android.view.Choreographer$FrameDisplayEventReceiver@b2ffc778: 0
+V/Logger  ( 1954): <<<<< Finished to Handler (android.view.Choreographer$FrameHandler) {b2ffc750} android.view.Choreographer$FrameDisplayEventReceiver@b2ffc778
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b300bf70} null: 22
+V/Logger  ( 1954): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b300bf70} null
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.app.ActivityThread$H) {b2fee3a8} null: 140
+V/Logger  ( 1954): <<<<< Finished to Handler (android.app.ActivityThread$H) {b2fee3a8} null
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.app.ActivityThread$H) {b2fee3a8} null: 109
+V/Logger  ( 1954): <<<<< Finished to Handler (android.app.ActivityThread$H) {b2fee3a8} null
+V/Logger  ( 1954): >>>>> Dispatching to Handler (android.app.ActivityThread$H) {b2fee3a8} null: 119
+V/Logger  ( 1954): <<<<< Finished to Handler (android.app.ActivityThread$H) {b2fee3a8} null
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3059c08} android.view.ViewRootImpl$4@b305ac90: 0
+V/Logger  ( 1987): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3059c08} android.view.ViewRootImpl$4@b305ac90
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.view.Choreographer$FrameHandler) {b305a928} android.view.Choreographer$FrameDisplayEventReceiver@b305a950: 0
+V/Logger  ( 1987): <<<<< Finished to Handler (android.view.Choreographer$FrameHandler) {b305a928} android.view.Choreographer$FrameDisplayEventReceiver@b305a950
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3059c08} null: 5
+V/Logger  ( 1987): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3059c08} null
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3059c08} null: 6
+V/Logger  ( 1987): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3059c08} null
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.view.inputmethod.InputMethodManager$H) {b305a008} null: 4
+V/Logger  ( 1987): <<<<< Finished to Handler (android.view.inputmethod.InputMethodManager$H) {b305a008} null
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.view.inputmethod.InputMethodManager$H) {b305a008} null: 2
+V/Logger  ( 1987): <<<<< Finished to Handler (android.view.inputmethod.InputMethodManager$H) {b305a008} null
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.view.Choreographer$FrameHandler) {b305a928} android.view.Choreographer$FrameDisplayEventReceiver@b305a950: 0
+V/Logger  ( 1987): <<<<< Finished to Handler (android.view.Choreographer$FrameHandler) {b305a928} android.view.Choreographer$FrameDisplayEventReceiver@b305a950
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3059c08} null: 13
+V/Logger  ( 1987): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3059c08} null
+V/Logger  ( 1987): >>>>> Dispatching to Handler (com.android.internal.view.IInputConnectionWrapper$MyHandler) {b305a0a8} null: 100
+V/Logger  ( 1987): <<<<< Finished to Handler (com.android.internal.view.IInputConnectionWrapper$MyHandler) {b305a0a8} null
+V/Logger  ( 1987): >>>>> Dispatching to Handler (com.android.internal.view.IInputConnectionWrapper$MyHandler) {b305a0a8} null: 65
+V/Logger  ( 1987): <<<<< Finished to Handler (com.android.internal.view.IInputConnectionWrapper$MyHandler) {b305a0a8} null
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3059c08} android.app.ActivityThread$1@b2fef488: 0
+V/Logger  ( 1987): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3059c08} android.app.ActivityThread$1@b2fef488
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3059c08} null: 22
+V/Logger  ( 1987): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3059c08} null
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.view.Choreographer$FrameHandler) {b305a928} android.view.Choreographer$FrameDisplayEventReceiver@b305a950: 0
+V/Logger  ( 1987): <<<<< Finished to Handler (android.view.Choreographer$FrameHandler) {b305a928} android.view.Choreographer$FrameDisplayEventReceiver@b305a950
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3059c08} android.view.View$PerformClick@b2ff2da8: 0
+V/Logger  ( 1987): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3059c08} android.view.View$PerformClick@b2ff2da8
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3059c08} android.view.View$UnsetPressedState@b305bf48: 0
+V/Logger  ( 1987): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3059c08} android.view.View$UnsetPressedState@b305bf48
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.app.ActivityThread$H) {b2fef160} null: 114
+V/Logger  ( 1987): <<<<< Finished to Handler (android.app.ActivityThread$H) {b2fef160} null
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.app.ActivityThread$H) {b2fef160} null: 115
+V/Logger  ( 1987): <<<<< Finished to Handler (android.app.ActivityThread$H) {b2fef160} null
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.view.Choreographer$FrameHandler) {b305a928} android.view.Choreographer$FrameDisplayEventReceiver@b305a950: 0
+V/Logger  ( 1987): <<<<< Finished to Handler (android.view.Choreographer$FrameHandler) {b305a928} android.view.Choreographer$FrameDisplayEventReceiver@b305a950
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.app.ActivityThread$H) {b2fef160} null: 131
+V/Logger  ( 1987): <<<<< Finished to Handler (android.app.ActivityThread$H) {b2fef160} null
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3059c08} null: 6
+V/Logger  ( 1987): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3059c08} null
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.app.ActivityThread$H) {b2fef160} null: 102
+V/Logger  ( 1987): <<<<< Finished to Handler (android.app.ActivityThread$H) {b2fef160} null
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3059c08} null: 8
+V/Logger  ( 1987): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3059c08} null
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.view.Choreographer$FrameHandler) {b305a928} android.view.Choreographer$FrameDisplayEventReceiver@b305a950: 0
+V/Logger  ( 1987): <<<<< Finished to Handler (android.view.Choreographer$FrameHandler) {b305a928} android.view.Choreographer$FrameDisplayEventReceiver@b305a950
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.app.ActivityThread$H) {b2fef160} null: 140
+V/Logger  ( 1987): <<<<< Finished to Handler (android.app.ActivityThread$H) {b2fef160} null
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.app.ActivityThread$H) {b2fef160} null: 109
+V/Logger  ( 1987): <<<<< Finished to Handler (android.app.ActivityThread$H) {b2fef160} null
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3059c08} null: 22
+V/Logger  ( 1987): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3059c08} null
+V/Logger  ( 1987): >>>>> Dispatching to Handler (android.app.ActivityThread$H) {b2fef160} null: 119
+V/Logger  ( 1987): <<<<< Finished to Handler (android.app.ActivityThread$H) {b2fef160} null
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3015100} android.view.ViewRootImpl$4@b301cdd0: 0
+V/Logger  ( 2014): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3015100} android.view.ViewRootImpl$4@b301cdd0
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.view.Choreographer$FrameHandler) {b2ff2160} android.view.Choreographer$FrameDisplayEventReceiver@b2ff2188: 0
+V/Logger  ( 2014): <<<<< Finished to Handler (android.view.Choreographer$FrameHandler) {b2ff2160} android.view.Choreographer$FrameDisplayEventReceiver@b2ff2188
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3015100} null: 5
+V/Logger  ( 2014): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3015100} null
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3015100} null: 6
+V/Logger  ( 2014): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3015100} null
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.view.inputmethod.InputMethodManager$H) {b2ff4e00} null: 4
+V/Logger  ( 2014): <<<<< Finished to Handler (android.view.inputmethod.InputMethodManager$H) {b2ff4e00} null
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.view.Choreographer$FrameHandler) {b2ff2160} android.view.Choreographer$FrameDisplayEventReceiver@b2ff2188: 0
+V/Logger  ( 2014): <<<<< Finished to Handler (android.view.Choreographer$FrameHandler) {b2ff2160} android.view.Choreographer$FrameDisplayEventReceiver@b2ff2188
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3015100} null: 13
+V/Logger  ( 2014): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3015100} null
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.view.inputmethod.InputMethodManager$H) {b2ff4e00} null: 2
+V/Logger  ( 2014): <<<<< Finished to Handler (android.view.inputmethod.InputMethodManager$H) {b2ff4e00} null
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3015100} android.app.ActivityThread$1@b2ff0328: 0
+V/Logger  ( 2014): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3015100} android.app.ActivityThread$1@b2ff0328
+V/Logger  ( 2014): >>>>> Dispatching to Handler (com.android.internal.view.IInputConnectionWrapper$MyHandler) {b2ff37f8} null: 100
+V/Logger  ( 2014): <<<<< Finished to Handler (com.android.internal.view.IInputConnectionWrapper$MyHandler) {b2ff37f8} null
+V/Logger  ( 2014): >>>>> Dispatching to Handler (com.android.internal.view.IInputConnectionWrapper$MyHandler) {b2ff37f8} null: 65
+V/Logger  ( 2014): <<<<< Finished to Handler (com.android.internal.view.IInputConnectionWrapper$MyHandler) {b2ff37f8} null
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3015100} null: 22
+V/Logger  ( 2014): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3015100} null
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.view.Choreographer$FrameHandler) {b2ff2160} android.view.Choreographer$FrameDisplayEventReceiver@b2ff2188: 0
+V/Logger  ( 2014): <<<<< Finished to Handler (android.view.Choreographer$FrameHandler) {b2ff2160} android.view.Choreographer$FrameDisplayEventReceiver@b2ff2188
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3015100} android.view.View$PerformClick@b305a8f0: 0
+V/Logger  ( 2014): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3015100} android.view.View$PerformClick@b305a8f0
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3015100} android.view.View$UnsetPressedState@b305a900: 0
+V/Logger  ( 2014): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3015100} android.view.View$UnsetPressedState@b305a900
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.app.ActivityThread$H) {b2ff0000} null: 114
+V/Logger  ( 2014): <<<<< Finished to Handler (android.app.ActivityThread$H) {b2ff0000} null
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.app.ActivityThread$H) {b2ff0000} null: 115
+V/Logger  ( 2014): <<<<< Finished to Handler (android.app.ActivityThread$H) {b2ff0000} null
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.view.Choreographer$FrameHandler) {b2ff2160} android.view.Choreographer$FrameDisplayEventReceiver@b2ff2188: 0
+V/Logger  ( 2014): <<<<< Finished to Handler (android.view.Choreographer$FrameHandler) {b2ff2160} android.view.Choreographer$FrameDisplayEventReceiver@b2ff2188
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.app.ActivityThread$H) {b2ff0000} null: 131
+V/Logger  ( 2014): <<<<< Finished to Handler (android.app.ActivityThread$H) {b2ff0000} null
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.app.ActivityThread$H) {b2ff0000} null: 102
+V/Logger  ( 2014): <<<<< Finished to Handler (android.app.ActivityThread$H) {b2ff0000} null
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3015100} null: 6
+V/Logger  ( 2014): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3015100} null
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3015100} null: 8
+V/Logger  ( 2014): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3015100} null
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.view.Choreographer$FrameHandler) {b2ff2160} android.view.Choreographer$FrameDisplayEventReceiver@b2ff2188: 0
+V/Logger  ( 2014): <<<<< Finished to Handler (android.view.Choreographer$FrameHandler) {b2ff2160} android.view.Choreographer$FrameDisplayEventReceiver@b2ff2188
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.app.ActivityThread$H) {b2ff0000} null: 140
+V/Logger  ( 2014): <<<<< Finished to Handler (android.app.ActivityThread$H) {b2ff0000} null
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.app.ActivityThread$H) {b2ff0000} null: 109
+V/Logger  ( 2014): <<<<< Finished to Handler (android.app.ActivityThread$H) {b2ff0000} null
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3015100} null: 22
+V/Logger  ( 2014): <<<<< Finished to Handler (android.view.ViewRootImpl$ViewRootHandler) {b3015100} null
+V/Logger  ( 2014): >>>>> Dispatching to Handler (android.app.ActivityThread$H) {b2ff0000} null: 119
+V/Logger  ( 2014): <<<<< Finished to Handler (android.app.ActivityThread$H) {b2ff0000} null
