@@ -619,6 +619,7 @@ public class MusicService extends Service implements OnCompletionListener, OnPre
         // Service is being killed, so make sure we release our resources
         mState = State.Stopped;
         updateScreen("stopped");
+        System.out.println("Service destroyed");
 
         relaxResources(true);
         giveUpAudioFocus();

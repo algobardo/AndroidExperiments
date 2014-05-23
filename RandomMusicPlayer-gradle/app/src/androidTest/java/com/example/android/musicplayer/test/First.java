@@ -1,5 +1,6 @@
 package com.example.android.musicplayer.test;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.test.ActivityInstrumentationTestCase2;
 import com.example.android.musicplayer.MainActivity;
@@ -48,6 +49,8 @@ public class First extends ActivityInstrumentationTestCase2<MainActivity> {
     }
 
     public void testPlayShowsCurrentTrack() {
+        // String WIKI_URL = "http://upload.wikimedia.org/wikipedia/commons/c/c8/Example.ogg";
+
         // Click on the eject button and press "Play!" on the displayed dialog
         onView(withId(R.id.ejectbutton)).perform(click());
         onView(withId(android.R.id.button1)).perform(click());
@@ -58,13 +61,20 @@ public class First extends ActivityInstrumentationTestCase2<MainActivity> {
         // Wait till it is no more loading
         registerIdlingResources(new StatusIdlingResource("StatusIdlingResource", activity, null, "loading"));
 
+        activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         // Now the application should be playing the suggested song
         onView(withId(R.id.currentTrack)).check(matches(withText(MainActivity.SUGGESTED_URL + " (playing)")));
 
-        // Click on the rewind button
-        onView(withId(R.id.rewindbutton)).perform(click());
-
-        // Now the application should have started playing the (same) song from the beginning
-        onView(withId(R.id.currentTrack)).check(matches(withText(MainActivity.SUGGESTED_URL + " (playing)")));
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -70,8 +70,10 @@ public class MainActivity extends Activity implements OnClickListener {
             String currentTrackTitle = intent.getStringExtra("currentTrackTitle");
             String currentTrackStatus = intent.getStringExtra("currentTrackStatus");
 
+            System.out.println("New state: " + currentTrackStatus);
+
             if (currentTrackStatus.equals("stopped")) {
-                mCurrentTrackTextView.setText("");
+                mCurrentTrackTextView.setText("(stopped)");
             } else {
                 mCurrentTrackTextView.setText(currentTrackTitle + " (" + currentTrackStatus + ")");
             }
