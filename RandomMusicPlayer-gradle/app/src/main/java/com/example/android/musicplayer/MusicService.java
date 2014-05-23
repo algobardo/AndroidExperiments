@@ -36,7 +36,11 @@ import android.net.Uri;
 import android.net.wifi.WifiManager;
 import android.net.wifi.WifiManager.WifiLock;
 import android.os.IBinder;
+import android.os.Message;
+import android.os.Messenger;
 import android.os.PowerManager;
+import android.os.RemoteException;
+import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -252,6 +256,8 @@ public class MusicService extends Service implements OnCompletionListener, OnPre
             // If we're paused, just continue playback and restore the 'foreground service' state.
             mState = State.Playing;
             setUpAsForeground(mSongTitle + " (playing)");
+            updateScreen("playing");
+
             configAndStartMediaPlayer();
         }
 
@@ -273,6 +279,8 @@ public class MusicService extends Service implements OnCompletionListener, OnPre
         if (mState == State.Playing) {
             // Pause media player and cancel the 'foreground service' state.
             mState = State.Paused;
+            updateScreen("paused");
+
             mPlayer.pause();
             relaxResources(false); // while paused, we always retain the MediaPlayer
             // do not give up audio focus
@@ -304,6 +312,7 @@ public class MusicService extends Service implements OnCompletionListener, OnPre
     void processStopRequest(boolean force) {
         if (mState == State.Playing || mState == State.Paused || force) {
             mState = State.Stopped;
+            updateScreen("stopped");
 
             // let go of all resources...
             relaxResources(true);
@@ -401,6 +410,8 @@ public class MusicService extends Service implements OnCompletionListener, OnPre
      */
     void playNextSong(String manualUrl) {
         mState = State.Stopped;
+        updateScreen("stopped");
+
         relaxResources(false); // release everything except MediaPlayer
 
         try {
@@ -437,6 +448,7 @@ public class MusicService extends Service implements OnCompletionListener, OnPre
 
             mState = State.Preparing;
             setUpAsForeground(mSongTitle + " (loading)");
+            updateScreen("loading");
 
             // Use the media button APIs (if available) to register ourselves for media button
             // events
@@ -508,6 +520,8 @@ public class MusicService extends Service implements OnCompletionListener, OnPre
         // The media player is done preparing. That means we can start playing!
         mState = State.Playing;
         updateNotification(mSongTitle + " (playing)");
+        updateScreen("playing");
+
         configAndStartMediaPlayer();
     }
 
@@ -518,6 +532,18 @@ public class MusicService extends Service implements OnCompletionListener, OnPre
                 PendingIntent.FLAG_UPDATE_CURRENT);
         mNotification.setLatestEventInfo(getApplicationContext(), "RandomMusicPlayer", text, pi);
         mNotificationManager.notify(NOTIFICATION_ID, mNotification);
+    }
+
+    /** Updates the screen. */
+    void updateScreen(String status) {
+        Intent intent = new Intent(MainActivity.SET_CURRENT_TRACK_ACTION);
+        intent.putExtra("currentTrackStatus", status);
+        if (status.equals("stopped")) {
+            intent.putExtra("currentTrackTitle", "");
+        } else {
+            intent.putExtra("currentTrackTitle", mSongTitle);
+        }
+        LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
     }
 
     /**
@@ -548,6 +574,8 @@ public class MusicService extends Service implements OnCompletionListener, OnPre
         Log.e(TAG, "Error: what=" + String.valueOf(what) + ", extra=" + String.valueOf(extra));
 
         mState = State.Stopped;
+        updateScreen("stopped");
+
         relaxResources(true);
         giveUpAudioFocus();
         return true; // true indicates we handled the error
@@ -575,6 +603,7 @@ public class MusicService extends Service implements OnCompletionListener, OnPre
     public void onMusicRetrieverPrepared() {
         // Done retrieving!
         mState = State.Stopped;
+        updateScreen("stopped");
 
         // If the flag indicates we should start playing after retrieving, let's do that now.
         if (mStartPlayingAfterRetrieve) {
@@ -589,6 +618,8 @@ public class MusicService extends Service implements OnCompletionListener, OnPre
     public void onDestroy() {
         // Service is being killed, so make sure we release our resources
         mState = State.Stopped;
+        updateScreen("stopped");
+
         relaxResources(true);
         giveUpAudioFocus();
     }

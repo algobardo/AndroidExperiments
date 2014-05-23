@@ -44,6 +44,7 @@
                 <action android:name="com.example.android.musicplayer.action.SKIP" />
                 <action android:name="com.example.android.musicplayer.action.REWIND" />
                 <action android:name="com.example.android.musicplayer.action.STOP" />
+                <action android:name="com.example.android.musicplayer.action.MESSENGER" />
             </intent-filter>
             <intent-filter>
                 <action android:name="com.example.android.musicplayer.action.URL" />

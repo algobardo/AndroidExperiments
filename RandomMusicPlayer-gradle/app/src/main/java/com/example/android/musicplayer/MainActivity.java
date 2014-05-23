@@ -18,10 +18,17 @@ package com.example.android.musicplayer;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.os.Messenger;
+import android.support.v4.content.LocalBroadcastManager;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -30,6 +37,7 @@ import android.widget.EditText;
 import android.util.LogPrinter;
 import android.util.Log;
 import android.os.Looper;
+import android.widget.TextView;
 
 /** 
  * Main activity: shows media player buttons. This activity shows the media player buttons and
@@ -41,7 +49,9 @@ public class MainActivity extends Activity implements OnClickListener {
      * The URL we suggest as default when adding by URL. This is just so that the user doesn't
      * have to find an URL to test this sample.
      */
-    final String SUGGESTED_URL = "http://www.vorbis.com/music/Epoq-Lepidoptera.ogg";
+    public static final String SUGGESTED_URL = "http://www.vorbis.com/music/Epoq-Lepidoptera.ogg";
+
+    public static final String SET_CURRENT_TRACK_ACTION = "com.example.android.musicplayer.action.SET_CURRENT_TRACK_ACTION";
 
     Button mPlayButton;
     Button mPauseButton;
@@ -49,6 +59,24 @@ public class MainActivity extends Activity implements OnClickListener {
     Button mRewindButton;
     Button mStopButton;
     Button mEjectButton;
+
+    TextView mCurrentTrackTextView;
+
+    // Our handler for received Intents. This will be called whenever an Intent
+    // with an action named "custom-event-name" is broadcasted.
+    private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String currentTrackTitle = intent.getStringExtra("currentTrackTitle");
+            String currentTrackStatus = intent.getStringExtra("currentTrackStatus");
+
+            if (currentTrackStatus.equals("stopped")) {
+                mCurrentTrackTextView.setText("");
+            } else {
+                mCurrentTrackTextView.setText(currentTrackTitle + " (" + currentTrackStatus + ")");
+            }
+        }
+    };
 
     /**
      * Called when the activity is first created. Here, we simply set the event listeners and
@@ -69,6 +97,7 @@ public class MainActivity extends Activity implements OnClickListener {
         mRewindButton = (Button) findViewById(R.id.rewindbutton);
         mStopButton = (Button) findViewById(R.id.stopbutton);
         mEjectButton = (Button) findViewById(R.id.ejectbutton);
+        mCurrentTrackTextView = (TextView) findViewById(R.id.currentTrack);
 
         mPlayButton.setOnClickListener(this);
         mPauseButton.setOnClickListener(this);
@@ -76,6 +105,16 @@ public class MainActivity extends Activity implements OnClickListener {
         mRewindButton.setOnClickListener(this);
         mStopButton.setOnClickListener(this);
         mEjectButton.setOnClickListener(this);
+
+        // Register to receive messages.
+        LocalBroadcastManager.getInstance(this).registerReceiver(mMessageReceiver,
+                new IntentFilter(SET_CURRENT_TRACK_ACTION));
+    }
+
+    @Override
+    public void onDestroy() {
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(mMessageReceiver);
+        super.onDestroy();
     }
 
     public void onClick(View target) {
