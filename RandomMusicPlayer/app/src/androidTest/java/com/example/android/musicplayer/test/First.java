@@ -43,11 +43,6 @@ public class First extends ActivityInstrumentationTestCase2<MainActivity> {
         super(activityClass);
     }
 
-    public void testInitiallyNoCurrentTrack() {
-        // Initially, no track should be playing
-        onView(withId(R.id.currentTrack)).check(matches(withText("")));
-    }
-
     public void testPlayShowsCurrentTrack() {
         // String WIKI_URL = "http://upload.wikimedia.org/wikipedia/commons/c/c8/Example.ogg";
 
@@ -61,6 +56,7 @@ public class First extends ActivityInstrumentationTestCase2<MainActivity> {
         // Wait till it is no more loading
         registerIdlingResources(new StatusIdlingResource("StatusIdlingResource", activity, null, "loading"));
 
+        System.out.println("Test: Change orientation");
         activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         try {
             Thread.sleep(10000);
