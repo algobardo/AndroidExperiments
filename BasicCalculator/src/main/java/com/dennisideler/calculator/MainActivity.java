@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
-	
 	public static final String ADD = "\u002B";
 	public static final String SUB = "\u2212";
 	public static final String DIV = "\u00F7";
