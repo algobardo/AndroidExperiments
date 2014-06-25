@@ -3,6 +3,9 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="15" />
@@ -15,7 +18,7 @@
             android:name="com.dennisideler.calculator.MainActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/title_activity_main"
-            android:theme="@android:style/Theme.NoTitleBar" >
+            android:theme="@android:style/Theme.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

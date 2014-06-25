@@ -3,10 +3,17 @@ package com.dennisideler.calculator;
 import java.text.DecimalFormat;
 import java.util.LinkedList;
 import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.telephony.SmsMessage;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	public static final String ADD = "\u002B";
@@ -16,10 +23,71 @@ public class MainActivity extends Activity {
 	public String value = "";
 	public LinkedList<String> operators = new LinkedList<String>();
 
+    private static final String ACTION_SMS_RECEIVED = "android.provider.Telephony.SMS_RECEIVED";
+    private static final String ACTION_LOW_BATTERY = "android.intent.action.BATTERY_LOW";
+    private static final String ACTION_CONNECTIVITY_CHANGE = "android.net.conn.CONNECTIVITY_CHANGE";
+
+    private BroadcastReceiver receiver;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(ACTION_SMS_RECEIVED);
+        filter.addAction(ACTION_LOW_BATTERY);
+        filter.addAction(ACTION_CONNECTIVITY_CHANGE);
+
+        registerReceiver(receiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                if (intent.getAction().equals(ACTION_SMS_RECEIVED)) {
+                    Bundle bundle = intent.getExtras();
+                    if (bundle != null) {
+                        // get sms objects
+                        Object[] pdus = (Object[]) bundle.get("pdus");
+                        if (pdus.length == 0) {
+                            return;
+                        }
+                        /*
+                        // large message might be broken into many
+                        SmsMessage[] messages = new SmsMessage[pdus.length];
+                        StringBuilder sb = new StringBuilder();
+                        for (int i = 0; i < pdus.length; i++) {
+                            messages[i] = SmsMessage.createFromPdu((byte[]) pdus[i]);
+                            sb.append(messages[i].getMessageBody());
+                        }
+                        String sender = messages[0].getOriginatingAddress();
+                        String message = sb.toString();
+                        Toast.makeText(context, sender + ": " + message, Toast.LENGTH_SHORT).show();
+                        */
+                        display("42");
+                    }
+                } else if (intent.getAction().equals(ACTION_LOW_BATTERY)) {
+                    display("43");
+                } else if (intent.getAction().equals(ACTION_CONNECTIVITY_CHANGE)) {
+                    ConnectivityManager connMgr = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+                    android.net.NetworkInfo wifi = connMgr.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+                    android.net.NetworkInfo mobile = connMgr.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+                    if (wifi.isAvailable() && wifi.isConnected() && mobile.isAvailable() && mobile.isConnected()) {
+                        display("44");
+                    } else if (wifi.isAvailable() && wifi.isConnected()) {
+                        display("45");
+                    } else if (mobile.isAvailable() && mobile.isConnected()) {
+                        display("46");
+                    } else {
+                        display("47");
+                    }
+                }
+            }
+        }, filter);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(receiver);
     }
 
     @Override

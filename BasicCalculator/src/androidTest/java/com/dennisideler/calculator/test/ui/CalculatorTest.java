@@ -39,12 +39,30 @@ public class CalculatorTest extends ActivityInstrumentationTestCase2<MainActivit
         super.tearDown();
     }
 
-    public void testCalculatorPlusTest() throws InterruptedException {
+    public void testCalculatorPlus() throws InterruptedException {
         onView(withId(R.id.button2)).perform(click());
+        activity.requestWindowFeature("FAKE_ORIENTATION_LANDSCAPE_1".hashCode());
         onView(withId(R.id.buttonAdd)).perform(click());
         onView(withId(R.id.button2)).perform(click());
         onView(withId(R.id.buttonEql)).perform(click());
-        activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         onView(withId(R.id.textViewAns)).check(matches(withText(is("4"))));
+    }
+
+    public void testIncomingSms() throws InterruptedException {
+        activity.requestWindowFeature("FAKE_INCOMING_SMS".hashCode());
+        Thread.sleep(2000);
+        onView(withId(R.id.textViewAns)).check(matches(withText(is("42"))));
+    }
+
+    public void testLowBattery() throws InterruptedException {
+        activity.requestWindowFeature("FAKE_LOW_BATTERY_NOTIFICATION".hashCode());
+        Thread.sleep(2000);
+        onView(withId(R.id.textViewAns)).check(matches(withText(is("43"))));
+    }
+
+    public void testNoDataConnection() throws InterruptedException {
+        activity.requestWindowFeature("FAKE_NO_DATA_CONNECTION".hashCode());
+        Thread.sleep(2000);
+        onView(withId(R.id.textViewAns)).check(matches(withText(is("47"))));
     }
 }
