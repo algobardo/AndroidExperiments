@@ -65,4 +65,9 @@ public class CalculatorTest extends ActivityInstrumentationTestCase2<MainActivit
         Thread.sleep(2000);
         onView(withId(R.id.textViewAns)).check(matches(withText(is("47"))));
     }
+
+    public void testInjectRotationOnClick() throws InterruptedException {
+        onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.textViewAns)).check(matches(withText(is("2"))));
+    }
 }

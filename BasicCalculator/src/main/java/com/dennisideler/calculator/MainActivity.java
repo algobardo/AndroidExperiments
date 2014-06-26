@@ -156,7 +156,7 @@ public class MainActivity extends Activity {
     	tvAns.setText(value);
     }
     
-    private void display(String s)
+    public void display(String s)
     {
     	TextView tvAns = (TextView) findViewById(R.id.textViewAns);
     	tvAns.setText(s);
