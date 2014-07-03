@@ -24,18 +24,20 @@ dependencies {
 
 android {
     compileSdkVersion 19
-    buildToolsVersion "19"
-
+    buildToolsVersion '19.0.2'
     // Espresso tests
     defaultConfig {
         minSdkVersion 10
         targetSdkVersion 19
-        packageName "com.dennisideler.calculator"
+        packageName 'com.dennisideler.calculator'
         testPackageName "com.dennisideler.calculator.test"
-        testInstrumentationRunner "com.dennisideler.calculator.test.DisableAnimationTestRunner"
+        testInstrumentationRunner 'com.dennisideler.calculator.test.DisableAnimationTestRunner'
     }
-
     packagingOptions {
         exclude 'LICENSE.txt'
+    }
+    productFlavors {
+    }
+    buildTypes {
     }
 }

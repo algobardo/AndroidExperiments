@@ -41,7 +41,7 @@ public class CalculatorTest extends ActivityInstrumentationTestCase2<MainActivit
 
     public void testCalculatorPlus() throws InterruptedException {
         onView(withId(R.id.button2)).perform(click());
-        activity.requestWindowFeature("FAKE_ORIENTATION_LANDSCAPE_1".hashCode());
+        // activity.requestWindowFeature("FAKE_ORIENTATION_LANDSCAPE_1".hashCode());
         onView(withId(R.id.buttonAdd)).perform(click());
         onView(withId(R.id.button2)).perform(click());
         onView(withId(R.id.buttonEql)).perform(click());
@@ -66,8 +66,11 @@ public class CalculatorTest extends ActivityInstrumentationTestCase2<MainActivit
         onView(withId(R.id.textViewAns)).check(matches(withText(is("47"))));
     }
 
+    @android.test.StressTest
     public void testInjectRotationOnClick() throws InterruptedException {
         onView(withId(R.id.button2)).perform(click());
+        // activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        // activity.requestWindowFeature("FAKE_ORIENTATION_LANDSCAPE".hashCode());
         onView(withId(R.id.textViewAns)).check(matches(withText(is("2"))));
     }
 }

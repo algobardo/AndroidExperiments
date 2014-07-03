@@ -34,6 +34,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /*
         IntentFilter filter = new IntentFilter();
         filter.addAction(ACTION_SMS_RECEIVED);
         filter.addAction(ACTION_LOW_BATTERY);
@@ -50,7 +51,7 @@ public class MainActivity extends Activity {
                         if (pdus.length == 0) {
                             return;
                         }
-                        /*
+                        
                         // large message might be broken into many
                         SmsMessage[] messages = new SmsMessage[pdus.length];
                         StringBuilder sb = new StringBuilder();
@@ -60,8 +61,7 @@ public class MainActivity extends Activity {
                         }
                         String sender = messages[0].getOriginatingAddress();
                         String message = sb.toString();
-                        Toast.makeText(context, sender + ": " + message, Toast.LENGTH_SHORT).show();
-                        */
+
                         display("42");
                     }
                 } else if (intent.getAction().equals(ACTION_LOW_BATTERY)) {
@@ -82,12 +82,13 @@ public class MainActivity extends Activity {
                 }
             }
         }, filter);
+        */
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        unregisterReceiver(receiver);
+        // unregisterReceiver(receiver);
     }
 
     @Override
