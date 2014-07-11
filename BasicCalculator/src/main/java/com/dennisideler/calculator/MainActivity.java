@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.util.Log;
 
 public class MainActivity extends Activity {
 	public static final String ADD = "\u002B";
@@ -34,6 +35,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Log.i("Lifecycle", "onCreate");
         /*
         IntentFilter filter = new IntentFilter();
         filter.addAction(ACTION_SMS_RECEIVED);
@@ -85,11 +87,44 @@ public class MainActivity extends Activity {
         */
     }
 
+
     @Override
     public void onDestroy() {
         super.onDestroy();
+        Log.i("Lifecycle", "onDestroy");
         // unregisterReceiver(receiver);
     }
+
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+        Log.i("Lifecycle", "onStart");
+    }
+    
+    @Override
+    protected void onRestart(){
+        super.onRestart();
+        Log.i("Lifecycle", "onRestart");   
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        Log.i("Lifecycle", "onResume");
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        Log.i("Lifecycle", "onResume");   
+    }
+    @Override
+    protected void onStop(){
+        super.onStop();
+        Log.i("Lifecycle", "onResume");   
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
