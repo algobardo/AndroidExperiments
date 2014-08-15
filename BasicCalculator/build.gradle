@@ -5,6 +5,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:0.10.+'
+//        classpath 'com.crashlytics.examples.gradle:preprocessor:1.0.0'
     }
 }
 
@@ -16,6 +17,8 @@ allprojects {
 }
 
 apply plugin: 'android'
+////////////////apply plugin: 'preprocessor'
+
 
 dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
