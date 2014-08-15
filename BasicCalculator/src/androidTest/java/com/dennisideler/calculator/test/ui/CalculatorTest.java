@@ -17,7 +17,6 @@ import static org.hamcrest.Matchers.is;
 /**
  * Created by cqa on 23/06/14.
  */
-@android.test.StressTest
 public class CalculatorTest extends ActivityInstrumentationTestCase2<MainActivity> {
     public static final String TAG = "CalculatorTest";
 
