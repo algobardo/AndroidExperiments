@@ -47,24 +47,6 @@ public class CalculatorTest extends ActivityInstrumentationTestCase2<MainActivit
         onView(withId(R.id.textViewAns)).check(matches(withText(is("4"))));
     }
 
-    public void testIncomingSms() throws InterruptedException {
-        activity.requestWindowFeature("FAKE_INCOMING_SMS".hashCode());
-        Thread.sleep(2000);
-        onView(withId(R.id.textViewAns)).check(matches(withText(is("42"))));
-    }
-
-    public void testLowBattery() throws InterruptedException {
-        activity.requestWindowFeature("FAKE_LOW_BATTERY_NOTIFICATION".hashCode());
-        Thread.sleep(2000);
-        onView(withId(R.id.textViewAns)).check(matches(withText(is("43"))));
-    }
-
-    public void testNoDataConnection() throws InterruptedException {
-        activity.requestWindowFeature("FAKE_NO_DATA_CONNECTION".hashCode());
-        Thread.sleep(2000);
-        onView(withId(R.id.textViewAns)).check(matches(withText(is("47"))));
-    }
-
     public void testInjectRotationOnClick() throws InterruptedException {
         onView(withId(R.id.button1)).perform(click());
         onView(withId(R.id.buttonDel)).perform(click());

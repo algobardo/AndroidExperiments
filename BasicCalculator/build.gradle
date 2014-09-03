@@ -19,7 +19,6 @@ allprojects {
 apply plugin: 'android'
 apply plugin: 'preprocessor'
 
-
 dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
     androidTestCompile 'com.jakewharton.espresso:espresso:1.1-r3'
@@ -28,7 +27,7 @@ dependencies {
 android {
     compileSdkVersion 19
     buildToolsVersion '19.0.2'
-    // Espresso tests
+
     defaultConfig {
         minSdkVersion 10
         targetSdkVersion 19
@@ -36,11 +35,37 @@ android {
         testPackageName "com.dennisideler.calculator.test"
         testInstrumentationRunner 'com.dennisideler.calculator.test.DisableAnimationTestRunner'
     }
+
     packagingOptions {
         exclude 'LICENSE.txt'
     }
-    productFlavors {
-    }
+
     buildTypes {
+
+        // Enable code coverage
+
+        debug {
+            testCoverageEnabled = true
+        }
     }
+}
+
+/*********************/
+/*** CODE COVERAGE ***/
+/*********************/
+
+allprojects {
+    
+    // Avoid VerifyError
+    
+    tasks.withType(JavaCompile) {
+        sourceCompatibility = 1.5
+        targetCompatibility = 1.5
+    }
+}
+
+task jacoco(dependsOn: "createDebugCoverageReport") {
+    group = "Reporting"
+
+    description = "Generate Jacoco coverage reports"
 }
